@@ -9,12 +9,32 @@ else{
 
 
 
-var favCar = prompt("What's your favourite class of cars classsic or modern?");
-if (favCar=='classic'){
-    document.write('<img src="images/classicCar.jpg"/>');
-}else if(favCar=='modern'){
-    document.write('<img src="images/modernCar.jpg"/>');
-
- }else{
-    alert('choose between classic or modern next time');
+var favCar = prompt("What's your favourite car?");
+while (favCar !== 'modern' && favCar !=='classic') {
+    favCar= prompt ('please enter modern or classic');
 }
+
+
+var result = '';
+var painting = '';
+var noPainting = prompt ("how many paints you want?");
+
+
+if (favCar=='classic'){
+    painting = '<img src="images/classicCar.jpg"/ width="250px"></br>';
+}else if(favCar=='modern'){
+    painting = '<img src="images/modernCar.jpg"/ width="250px"></br>';
+
+ } else{
+     alert('choose between classic or modern');
+ }
+ 
+
+  var num =0;
+ for (var i=0;i<noPainting;i++) {
+    result+=painting;
+    
+    num++
+    console.log(num);
+}
+document.write(result+num);
